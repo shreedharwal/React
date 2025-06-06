@@ -1,14 +1,19 @@
-import { useState } from 'react'
+import { useState } from 'react'//for Hook
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let counter= 5
+  const [counter,setCounter] = useState(5) //to change state in ui in dom
+  
   const addValue=()=>{
-    console.log("clicked",Math.random());
-    
-    counter =counter+1
+    console.log("clicked",counter);
+    //counter =counter+1
+    setCounter(counter+1)
+  }
+  const removeValue=()=>{
+    console.log("clicked",counter);
+    setCounter(counter-1)
   }
 
 
@@ -19,8 +24,10 @@ function App() {
       
       <button
       onClick={addValue}
-      >Add Value</button>
-      <button>Remove Value</button>
+      >Add Value {counter}</button>
+      <button 
+      onClick={removeValue}
+      >Remove Value {counter}</button>
     </>
   )
 }
