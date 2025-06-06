@@ -4,16 +4,20 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [counter,setCounter] = useState(5) //to change state in ui in dom
+  const [counter,setCounter] = useState(0) //to change state in ui in dom
   
   const addValue=()=>{
-    console.log("clicked",counter);
+    // console.log("clicked",counter);
     //counter =counter+1
-    setCounter(counter+1)
+    if(counter < 20 ){
+      setCounter(counter+1)
+    }
   }
   const removeValue=()=>{
-    console.log("clicked",counter);
-    setCounter(counter-1)
+    if(counter >0 ){
+      setCounter(counter-1)
+    }
+    
   }
 
 
