@@ -1,6 +1,4 @@
 import { useState } from 'react'//for Hook
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -10,7 +8,20 @@ function App() {
     // console.log("clicked",counter);
     //counter =counter+1
     if(counter < 20 ){
-      setCounter(counter+1)
+      // setCounter(counter+1)
+      setCounter(prevCounter => prevCounter+1)
+      setCounter(prevCounter => prevCounter+1)
+      setCounter(prevCounter => prevCounter+1)
+      setCounter(prevCounter => prevCounter+1) 
+      //for interview question
+      //this will process the items in batch
+      //This is necessary because state updates in React are asynchronous and may be batched.
+      //Using the current value of the counter directly like setCounter(counter + 1) 
+      // four times would not increase the counter by 4 — it may end up adding just 1 due to batching.
+      //First call: counter → counter + 1
+      // Second call: result of previous → +1 again
+      // And so on...
+
     }
   }
   const removeValue=()=>{
