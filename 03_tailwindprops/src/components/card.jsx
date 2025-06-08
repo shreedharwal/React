@@ -1,6 +1,13 @@
 import React from 'react'
 
-function Card(){
+// function Card(Props){
+    
+//     console.log(Props.channel);
+// }
+function Card( {channel}){
+    console.log(channel);
+    
+
     return (
         <div className="flex flex-col rounded-xl  p-4"
         style={{
@@ -21,7 +28,7 @@ function Card(){
         </div>
         <div className="flex flex-col  rounded-b-xl py-4 ">
           <div className="flex justify-between">
-            <h1 className="font-RubikBold ">Bored ape nft accidental</h1>
+            <h1 className="font-RubikBold ">{channel}</h1>
             <h1 className="font-bold font-RubikBold">Price</h1>
           </div>
           <div className="flex  justify-between font-mono">

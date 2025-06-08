@@ -1,4 +1,4 @@
-// props make content reusable
+// props make content reusable, props is a object
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -7,6 +7,12 @@ import Card from './components/card'
 
 function App() {
   const [count, setCount] = useState(0)
+  let myObj= {
+    username: 'shreya',
+    age: 20
+  }
+
+  let newarr= [1,2,3]
 
   return (
     <>
@@ -27,7 +33,8 @@ function App() {
  </div> */}
 
 
-        <Card/>
+        <Card channel="React with shreya" someObj= {myObj}  />
+        <Card newChannel= "React" someObj= {newarr}/>
 
     </>
   )
