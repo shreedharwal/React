@@ -36,3 +36,32 @@ function App() {
 }
 
 export default App
+
+
+// Rendering: Converting your React components (JSX/JavaScript) 
+// into real DOM elements that the browser can understand and display.
+// Example:
+
+// You write JSX in your component:
+//           function Welcome() {
+//             return <h2>Welcome to React!</h2>;
+//           }
+
+// You mount it using:
+//           const root = createRoot(document.getElementById('root'));
+//           root.render(<Welcome />);   
+
+//React transforms the JSX into:
+//           <h2>Welcome to React!</h2>
+
+// And inserts it into the HTML DOM like this:
+//          <div id="root">
+//             <h2>Welcome to React!</h2>
+//          </div>          
+
+// Rendering = turning your React code (JSX) into visible UI in the browser.
+// Types of Rendering in React
+// Re-rendering
+// Client-side Rendering
+// Server-side Rendering
+// Initial Rendering
